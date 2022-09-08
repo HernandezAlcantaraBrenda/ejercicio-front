@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {IndexPersonaComponent} from '../index-persona/index-persona.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {RouterModule} from '@angular/router';
     ReactiveFormsModule,
     MatButtonModule,
     CommonModule,
-    PersonaRoutingModule
+    PersonaRoutingModule,
+    MatCardModule
   ]
 })
 export class PersonaModule { }
