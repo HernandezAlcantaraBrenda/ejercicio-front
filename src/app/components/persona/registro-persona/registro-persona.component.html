@@ -1,0 +1,65 @@
+<!--suppress TypeScriptValidateTypes -->
+<div>
+  <form
+    [formGroup]="fgPersona"
+    (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="outline">
+          <mat-label>
+            Nombre
+          </mat-label>
+          <input matInput [formControl]="fgPersona.get('nombre')" required>
+          <mat-error *ngIf="fgPersona.get('nombre').hasError('required')">
+            El <strong>nombre</strong> es requerido
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="col">
+        <mat-form-field appearance="outline">
+          <mat-label>
+            Apellido Paterno
+          </mat-label>
+          <input matInput [formControl]="fgPersona.get('apellidoPaterno')" required>
+          <mat-error *ngIf="fgPersona.get('apellidoPaterno').hasError('required')">
+            El <strong>apellido paterno</strong> es requerido
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="outline">
+          <mat-label>
+            Apellido Materno
+          </mat-label>
+          <input matInput [formControl]="fgPersona.get('apellidoMaterno')" >
+        </mat-form-field>
+      </div>
+
+      <div class="col">
+        <mat-form-field appearance="outline">
+          <mat-label>
+            Identificacion
+          </mat-label>
+          <input matInput [formControl]="fgPersona.get('identificacion')" required>
+          <mat-error *ngIf="fgPersona.get('identificacion').hasError('required')">
+            La <strong>identificacion</strong> es requerida
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="col d-flex justify-content-end">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit">
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>
